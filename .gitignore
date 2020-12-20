@@ -1,0 +1,3 @@
+# exclude files created by CLionl
+.idea/
+cmake-build-debug/
