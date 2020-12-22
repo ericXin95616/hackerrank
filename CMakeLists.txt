@@ -3,4 +3,4 @@ project(hackerrank)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(hackerrank DP/decodeWaysII.cpp)
+add_executable(hackerrank DP/wordBreak.cpp)
