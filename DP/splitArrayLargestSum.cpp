@@ -14,6 +14,9 @@
 
 using std::vector;
 
+/*
+ *
+ */
 int splitArray(vector<int>& nums, int m) {
     vector<vector<int>> dp(nums.size() + 1, vector<int>(m + 1, INT_MAX));
     vector<int> sub(nums.size() + 1, 0);

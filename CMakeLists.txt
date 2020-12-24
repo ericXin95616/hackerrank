@@ -3,4 +3,7 @@ project(hackerrank)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(hackerrank DP/splitArrayLargestSum.cpp)
+find_package(GTest CONFIG REQUIRED)
+set(TARGET hackerrank)
+add_executable(${TARGET} DP/wordBreakII.cpp)
+target_link_libraries(${TARGET} GTest::gtest GTest::gmock)

@@ -92,7 +92,7 @@ bool wordBreak_m(string s, vector<string>& wordDict) {
 }
 
 /*
- * DP version
+ * DP version - Solution
  */
 bool wordBreak(string s, vector<string>& wordDict) {
     vector<int> dp(s.size()+1, false);
@@ -105,7 +105,7 @@ bool wordBreak(string s, vector<string>& wordDict) {
     dp.at(0) = true;
     for (int i = 1; i < dp.size(); ++i) {
         for (int j = 0; j < i; ++j) {
-            // if F(S[0-j]) is true and dict contains word S[j+1-i], we could say F(S[0-i]) is true
+            // if F(S[0-j]) is true and dict contains word S[j-(i - 1)], we could say F(S[0-i]) is true
             if(dp.at(j) && dict.end() != dict.find(s.substr(j,i-j))) {
                 dp.at(i) = true;
                 break;
